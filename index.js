@@ -19,8 +19,7 @@ document.getElementById('index-button').addEventListener('click', function(e)
     // login build
     if(mobileNumber === fixMobileNumber && pinNumber === fixPin )
     {
-        // window.location.href(./home.html);
-        alert('Good Job')
+        window.location.href = "home.html";
     }
     else
     {
