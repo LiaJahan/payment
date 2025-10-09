@@ -1,3 +1,11 @@
+// common function to access total amount
+function functionAvailableBalance(id)
+{
+    let availableBalance = parseInt(document.getElementById(id).innerText);
+    return availableBalance;
+}
+
+
 // code for Add Money
 
 // const validPinNumber = 1234;
@@ -10,7 +18,7 @@ document.getElementById('home-page-button').addEventListener('click', function(e
     const amountToAdd = parseInt(document.getElementById('amount-to-add').value);
     const pinNumber = parseInt(document.getElementById('pin-number').value);
 
-    let availableBalance = parseInt(document.getElementById('available-balance').innerText);
+    let availableBalance = functionAvailableBalance('available-balance');
 
     // console.log(availableBalance);
 
@@ -61,7 +69,7 @@ document.getElementById('withdrawMoneyButton').addEventListener('click', functio
         return;
     }
 
-    let availableBalance2 = parseInt(document.getElementById('available-balance').innerText);
+    let availableBalance2 = functionAvailableBalance('available-balance');
 
     
     availableBalance2 = availableBalance2 - withdrawAmount;
@@ -69,3 +77,20 @@ document.getElementById('withdrawMoneyButton').addEventListener('click', functio
     console.log(availableBalance2);
     document.getElementById('available-balance').innerText = availableBalance2; 
 })
+
+// toggling
+
+// cashout-pointer-button
+document.getElementById('cashout-pointer-button').addEventListener('click', function()
+{
+    document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('cash-out-container').style.display = 'block';
+})
+
+// add-money-pointer-button
+document.getElementById('add-money-pointer-button').addEventListener('click', function()
+{
+    document.getElementById('cash-out-container').style.display = 'none';
+    document.getElementById('add-money-container').style.display = 'block';
+})
+
