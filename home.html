@@ -70,6 +70,8 @@
 
 
     <!-- form part -->
+
+    <!-- add money -->
     <section class="p-5">
         <h2 class="font-bold text-lg">Add Money</h2>
         <form class="bg-white p-9 rounded-2xl">
@@ -100,6 +102,31 @@
             
 
             <button id="home-page-button" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Add Money</button>
+        </form>
+    </section>
+
+    <!-- Cash out -->
+    <section class="p-5">
+        <h2 class="font-bold text-lg">Cash Out</h2>
+        <form class="bg-white p-9 rounded-2xl">
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Agent Number</p>
+                <input id="withdraw-agent-number" type="text" placeholder="Enter 11 digit number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Amount</p>
+                <input id="withdraw-amount" type="text" placeholder="Enter Amount to withdraw" class="input w-full mb-3 text-gray-600 rounded-3xl bg-[#f4f5f7] border-none" />
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Pin Number</p>
+                <input id="withdraw-pin-number" type="text" placeholder="Enter 4 digit pin number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+            
+
+            <button id="withdrawMoneyButton" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Withdraw Money</button>
         </form>
     </section>
     <script src="home.js"></script>

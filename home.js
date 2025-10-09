@@ -1,3 +1,5 @@
+// code for Add Money
+
 // const validPinNumber = 1234;
 document.getElementById('home-page-button').addEventListener('click', function(e)
 {
@@ -36,4 +38,34 @@ document.getElementById('home-page-button').addEventListener('click', function(e
     document.getElementById('available-balance').innerText = availableBalance;
 
     // console.log(selectBank, bankAccountNumber, amountToAdd, pinNumber);
+})
+
+// Code for withdraw Money
+document.getElementById('withdrawMoneyButton').addEventListener('click', function(e)
+{
+    e.preventDefault();
+    const withdrawAgentNumber = document.getElementById('withdraw-agent-number').value;
+    const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value);
+    const withdrawPinNumber = parseInt(document.getElementById('withdraw-pin-number').value);
+
+    // console.log(withdrawAgentNumber, withdrawAmount, withdrawPinNumber);
+
+    if(withdrawAgentNumber.length<11)
+    {
+        alert('Please check all the information again');
+        return;
+    }
+    if(withdrawPinNumber !== 1234)
+    {
+        alert('Please check all the information again');
+        return;
+    }
+
+    let availableBalance2 = parseInt(document.getElementById('available-balance').innerText);
+
+    
+    availableBalance2 = availableBalance2 - withdrawAmount;
+
+    console.log(availableBalance2);
+    document.getElementById('available-balance').innerText = availableBalance2; 
 })
