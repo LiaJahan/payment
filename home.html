@@ -20,7 +20,7 @@
             <div class="flex items-center p-3 mt-3">
                 <img class="w-12" src="image/Group.png" alt="">
                 <div>
-                    <h2 class="font-bold">$<span>45000</span></h2>
+                    <h2 class="font-bold">$<span id="available-balance">45000</span></h2>
                     <p class="text-gray-400">Available Balance </p>
                 </div>
             </div>
@@ -38,7 +38,7 @@
 
             <div class="grid grid-cols-3 gap-5">
 
-                <div class="border-2 border-purple-100 rounded-lg justify-center items-center p-5 ">
+                <div class="border-2 border-purple-100 rounded-lg flex flex-col justify-center items-center p-5">
                 <img src="image/wallet1.png" alt="">
                 <p class="font-normal text-sm text-gray-600 ">Add Money</p>
                 </div>
@@ -76,7 +76,7 @@
 
             <div>
                 <p class="font-semibold mb-2 text-gray-700 ">Select A Bank</p>
-                <select class="select appearance-none w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none">
+                <select id="select-bank" class="select appearance-none w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none">
                     <option disabled selected class="text-gray-600">Select Bank</option>
                     <option>Swedbank</option>
                     <option>Nordea</option>
@@ -86,21 +86,22 @@
 
             <div>
                 <p class="font-semibold mb-2 text-gray-700">Bank Account Number</p>
-                <input type="text" placeholder="Enter 11 digit account number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+                <input id="bank-account-number" type="text" placeholder="Enter 11 digit account number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
             </div>
 
             <div>
                 <p class="font-semibold mb-2 text-gray-700">Amount to Add</p>
-                <input type="text" placeholder="Add Amount to withdraw" class="input w-full mb-3 text-gray-600 rounded-3xl bg-[#f4f5f7] border-none" />
+                <input id="amount-to-add" type="text" placeholder="Add Amount to withdraw" class="input w-full mb-3 text-gray-600 rounded-3xl bg-[#f4f5f7] border-none" />
             </div>
             <div>
                 <p class="font-semibold mb-2 text-gray-700">Pin Number</p>
-                <input type="text" placeholder="Enter 4 digit pin number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+                <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
             </div>
             
 
-            <button id="index-button" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Login</button>
+            <button id="home-page-button" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Login</button>
         </form>
     </section>
+    <script src="home.js"></script>
 </body>
 </html>
