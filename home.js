@@ -84,13 +84,70 @@ document.getElementById('withdrawMoneyButton').addEventListener('click', functio
 document.getElementById('cashout-pointer-button').addEventListener('click', function()
 {
     document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'none';
+    document.getElementById('get-bonus-container').style.display = 'none';
+    document.getElementById('pay-bill-container').style.display = 'none';
+    document.getElementById('transactions-container').style.display = 'none';
     document.getElementById('cash-out-container').style.display = 'block';
 })
 
 // add-money-pointer-button
 document.getElementById('add-money-pointer-button').addEventListener('click', function()
 {
-    document.getElementById('cash-out-container').style.display = 'none';
     document.getElementById('add-money-container').style.display = 'block';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'none';
+    document.getElementById('get-bonus-container').style.display = 'none';
+    document.getElementById('pay-bill-container').style.display = 'none';
+    document.getElementById('transactions-container').style.display = 'none';
+    document.getElementById('cash-out-container').style.display = 'none';
 })
 
+// transfer-money-button
+document.getElementById('transfer-money-button').addEventListener('click', function()
+{
+    document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'block';
+    document.getElementById('get-bonus-container').style.display = 'none';
+    document.getElementById('pay-bill-container').style.display = 'none';
+    document.getElementById('transactions-container').style.display = 'none';
+    document.getElementById('cash-out-container').style.display = 'none';
+})
+
+// get-bonus-button
+document.getElementById('get-bonus-button').addEventListener('click', function()
+{
+    document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'none';
+    document.getElementById('get-bonus-container').style.display = 'block';
+    document.getElementById('pay-bill-container').style.display = 'none';
+    document.getElementById('transactions-container').style.display = 'none';
+    document.getElementById('cash-out-container').style.display = 'none';
+})
+
+// pay-bill-button
+document.getElementById('pay-bill-button').addEventListener('click', function()
+{
+    document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'none';
+    document.getElementById('get-bonus-container').style.display = 'none';
+    document.getElementById('pay-bill-container').style.display = 'block';
+    document.getElementById('transactions-container').style.display = 'none';
+    document.getElementById('cash-out-container').style.display = 'none';
+})
+
+// transcation-button
+document.getElementById('transcation-button').addEventListener('click', function()
+{
+    document.getElementById('add-money-container').style.display = 'none';
+    document.getElementById('latest-payment').style.display = 'none';
+    document.getElementById('transfer-money-container').style.display = 'none';
+    document.getElementById('get-bonus-container').style.display = 'none';
+    document.getElementById('pay-bill-container').style.display = 'none';
+    document.getElementById('transactions-container').style.display = 'block';
+    document.getElementById('cash-out-container').style.display = 'none';
+})
