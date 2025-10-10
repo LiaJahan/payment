@@ -72,6 +72,14 @@
 
     <!-- form part -->
 
+    <!-- Latest Payment -->
+     <section id="latest-payment" class="p-5">
+        <div class="flex justify-between items-center">
+            <h2 class="font-bold text-lg">Latest Payment</h2>
+            <p class="text-gray-600">View All</p>
+        </div>
+     </section>
+
     <!-- add money -->
     <section class="p-5" id="add-money-container">
         <h2 class="font-bold text-lg">Add Money</h2>
@@ -130,6 +138,90 @@
             <button id="withdrawMoneyButton" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Withdraw Money</button>
         </form>
     </section>
+
+    <!-- Transfer Money -->
+     
+     <section id="transfer-money-container" class="p-5">
+        <h2 class="font-bold text-lg">Transfer Money</h2>
+        <form class="bg-white p-9 rounded-2xl">
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">User Account Number</p>
+                <input type="text" placeholder="Enter 11 digit number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Amount</p>
+                <input type="text" placeholder="Enter Amount to Transfer" class="input w-full mb-3 text-gray-600 rounded-3xl bg-[#f4f5f7] border-none" />
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Pin Number</p>
+                <input id="withdraw-pin-number" type="text" placeholder="Enter 4 digit pin number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+            
+
+            <button id="withdrawMoneyButton" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Send Now</button>
+        </form>
+    </section>
+
+    <!-- Get Bonus -->
+    
+    <section id="get-bonus-container" class="p-5">
+        <h2 class="font-bold text-lg">Get Bonus</h2>
+        <form class="bg-white p-9 rounded-2xl">
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Enter Bonus Coupon</p>
+                <input id="withdraw-pin-number" type="text" placeholder="Enter your Coupon" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+            
+            <button id="withdrawMoneyButton" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Get Bonu</button>
+        </form>
+    </section>
+
+    <!-- Pay Bill -->
+     <section class="p-5" id="pay-bill-container">
+        <h2 class="font-bold text-lg">Pay Bill</h2>
+        <form class="bg-white p-9 rounded-2xl">
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700 ">Select To Pay</p>
+                <select class="select appearance-none w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none">
+                    <option value="" disabled selected class="text-gray-600">Select Back</option>
+                    <option>Swedbank</option>
+                    <option>Nordea</option>
+                    <option>Swish Bank</option>
+                </select>
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Biller Account Number</p>
+                <input type="text" placeholder="Enter account number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Amount to Add</p>
+                <input type="text" placeholder="Add Amount to Pay" class="input w-full mb-3 text-gray-600 rounded-3xl bg-[#f4f5f7] border-none" />
+            </div>
+            <div>
+                <p class="font-semibold mb-2 text-gray-700">Pin Number</p>
+                <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class="input w-full text-gray-600 rounded-3xl mb-3 bg-[#f4f5f7] border-none" />
+            </div>
+            
+
+            <button id="home-page-button" class="btn bg-[#0874F2] text-white rounded-3xl w-full ">Pay Now</button>
+        </form>
+    </section>
+
+    <!-- Transactions -->
+     <section id="transactions-container" class="p-5">
+        <div class="flex justify-between items-center">
+            <h2 class="font-bold text-lg">Transaction History</h2>
+            <p class="text-gray-600">View All</p>
+        </div>
+     </section>
+
     <script src="home.js"></script>
 </body>
 </html>
