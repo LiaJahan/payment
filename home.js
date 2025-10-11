@@ -1,3 +1,6 @@
+// for transaction history
+const transactionData = [];
+
 // common function to access total amount
 function functionAvailableBalance(id)
 {
@@ -45,6 +48,15 @@ document.getElementById('home-page-button').addEventListener('click', function(e
 
     document.getElementById('available-balance').innerText = availableBalance;
 
+    // for transaction part
+    const data ={
+        name: 'Add Money', 
+        date: new Date().toLocaleDateString()
+    }
+
+    transactionData.push(data);
+    console.log(transactionData);
+
     // console.log(selectBank, bankAccountNumber, amountToAdd, pinNumber);
 })
 
@@ -76,6 +88,46 @@ document.getElementById('withdrawMoneyButton').addEventListener('click', functio
 
     console.log(availableBalance2);
     document.getElementById('available-balance').innerText = availableBalance2; 
+
+    // for transaction part
+    let data ={
+        name: 'Cash Out', 
+        date: new Date().toLocaleDateString()
+    }
+
+    transactionData.push(data);
+    console.log(transactionData);
+})
+
+// transaction History dynamic
+document.getElementById('transcation-button').addEventListener('click',function()
+{
+
+    const transactionContainer = document.getElementById('transactions-container');
+    transactionContainer.innerText = '';
+
+    
+    for(const tData of transactionData)
+    {
+        const div = document.createElement('div');
+        div.innerHTML =
+         `
+        <div class="mt-5 rounded-lg p-3 bg-white">
+        <div class="flex items-center justify-between">
+        <div class="flex gap-5 items-center">
+        <img class="p-3 rounded-full bg-[#f4f5f7]" src="image/wallet1.png" alt="">
+        <div>
+        <h2 class="font-semibold text-lg">${tData.name}</h2>
+        <p class="text-gray-500">${tData.date}</p>
+        </div>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        </div>
+        `
+
+        transactionContainer.appendChild(div);
+    }
 })
 
 // toggling
