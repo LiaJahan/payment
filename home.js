@@ -100,15 +100,20 @@ document.getElementById('withdrawMoneyButton').addEventListener('click', functio
 })
 
 // transaction History dynamic
-document.getElementById('transcation-button').addEventListener('click',function()
+document.getElementById('transcation-button').addEventListener('click',function(e)
 {
-
+    e.preventDefault();
     const transactionContainer = document.getElementById('transactions-container');
-    transactionContainer.innerText = '';
-
-    
+    transactionContainer.innerHTML = `
+    <div class="flex justify-between items-center">
+        <h2 class="font-bold text-lg">Transaction History</h2>
+        <p class="text-gray-600">View All</p>
+    </div>
+`;
+ 
     for(const tData of transactionData)
     {
+
         const div = document.createElement('div');
         div.innerHTML =
          `
@@ -203,3 +208,5 @@ document.getElementById('transcation-button').addEventListener('click', function
     document.getElementById('transactions-container').style.display = 'block';
     document.getElementById('cash-out-container').style.display = 'none';
 })
+
+
